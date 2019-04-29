@@ -3,11 +3,11 @@
     session_start();
 
     if(!isset($_SESSION['loggedin'])) {
-      header('Location: http://127.0.0.1/NGCB/Materials%20Engineer/loginpage.php');
+      header('Location: http://ngcbdcinventorysystem/Materials%20Engineer/loginpage.php');
     }
     $account_id = "";
     if(!isset($_SESSION['loggedin'])) {
-        header('Location: http://127.0.0.1/NGCB/index.php');
+        header('Location: http://ngcbdcinventorysystem/index.php');
     }
   ?>
 

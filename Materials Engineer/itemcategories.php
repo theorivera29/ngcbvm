@@ -3,7 +3,7 @@
     session_start();
 
     if(!isset($_SESSION['loggedin'])) {
-        header('Location: http://127.0.0.1/NGCB/index.php');
+        header('Location: http://ngcbdcinventorysystem/index.php');
     }
     $projects_name = $_GET['projects_name'];
     $categories_id = $_GET['categories_id'];

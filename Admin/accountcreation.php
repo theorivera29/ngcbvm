@@ -2,7 +2,7 @@
     include "../db_connection.php";
     session_start();
     if(!isset($_SESSION['loggedin'])) {
-        header('Location: http://localhost/index.php');
+        header('Location: http://ngcbdcinventorysystem/index.php');
     }
 ?>
 

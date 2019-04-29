@@ -18,18 +18,18 @@
             $_SESSION['loggedin' ] = true;
             $_SESSION['account_type'] = $accounts_type;
             if (strcmp($accounts_type,"Admin") == 0) {
-                header("location: http://localhost/Admin/admindashboard.php");
+                header("location: http://ngcbdcinventorysystem/Admin/admindashboard.php");
                 $stmt->close();                
             } else if (strcmp($accounts_type,"MatEng") == 0) {
-                header("location: http://localhost/Materials%20Engineer/dashboard.php");    
+                header("location: http://ngcbdcinventorysystem/Materials%20Engineer/dashboard.php");    
                 $stmt->close();                            
             } else {
-                header("location: http://localhost/View%20Only/projects.php");
+                header("location: http://ngcbdcinventorysystem/View%20Only/projects.php");
                 $stmt->close();                                
             }
         } else {
             $_SESSION['login_error'] = true;
-            header("location: http://localhost/index.php");
+            header("location: http://ngcbdcinventorysystem/index.php");
             $stmt->close();                
         } 
     }
@@ -69,7 +69,7 @@
                 $mail->send();
             } catch (Exception $e) {}
         } 
-        header("Location: http://localhost/Admin/listofaccounts.php");
+        header("Location: http://ngcbdcinventorysystem/Admin/listofaccounts.php");
     }
     
     if (isset($_POST['create_project'])) {
@@ -79,7 +79,7 @@
         $end_date = mysqli_real_escape_string($conn, $_POST['enddate']);
         $mateng = mysqli_real_escape_string($conn, $_POST['mateng']);
         if(strtotime($start_date) == strtotime($end_date)) {
-            header("Location: http://localhost/Admin/projects.php");      
+            header("Location: http://ngcbdcinventorysystem/Admin/projects.php");      
         }
         $stmt = $conn->prepare("SELECT projects_name FROM projects WHERE projects_name = ?;");
         $stmt->bind_param("s", $projects_name);
@@ -113,7 +113,7 @@
             $create_proj_date = date("Y-m-d G:i:s");
             $logs_message = 'Created project '.$projects_name;
             $logs_of = 1;
-            header("Location: http://localhost/Admin/projects.php");            
+            header("Location: http://ngcbdcinventorysystem/Admin/projects.php");            
         }
     }
     
@@ -124,7 +124,7 @@
         $close_date = date("Y-m-d G:i:s");
         $sql = "INSERT INTO logs (logs_datetime, logs_activity, logs_logsOf) VALUES ('$close_date', 'Closed project $projects_name', 1);";
         mysqli_query($conn, $sql);
-        header("location: http://localhost/Admin/projects.php");        
+        header("location: http://ngcbdcinventorysystem/Admin/projects.php");        
     }
 
     if (isset($_POST['reopen_project'])) {
@@ -134,7 +134,7 @@
         $reopen_date = date("Y-m-d G:i:s");
         $sql = "INSERT INTO logs (logs_datetime, logs_activity, logs_logsOf) VALUES ('$reopen_date', 'Reopened project $projects_name', 1);";
         mysqli_query($conn, $sql);
-        header("location: http://localhost/Admin/projects.php");        
+        header("location: http://ngcbdcinventorysystem/Admin/projects.php");        
     }
 
     if(isset($_POST['edit_project'])) {
@@ -172,53 +172,53 @@
                 $stmt->execute();
                 $stmt->close();
             }
-        header("location: http://localhost/Admin/projects.php");        
+        header("location: http://ngcbdcinventorysystem/Admin/projects.php");        
     } 
 
     if(isset($_POST['view_inventory'])) {
         $projects_name = mysqli_real_escape_string($conn, $_POST['projects_name']);
         $account_type = mysqli_real_escape_string($conn, $_POST['account_type']);
         if(strcmp($account_type,'MatEng') == 0) {
-            header("location: http://localhost/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");            
+            header("location: http://ngcbdcinventorysystem/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");            
         } else {
-            header("location: http://localhost/View%20Only/viewinventory.php?projects_name=$projects_name");            
+            header("location: http://ngcbdcinventorysystem/View%20Only/viewinventory.php?projects_name=$projects_name");            
         }
     }
 
     if(isset($_POST['back'])) {
         $projects_name = mysqli_real_escape_string($conn, $_POST['projects_name']);
-            header("location: http://localhost/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");            
+            header("location: http://ngcbdcinventorysystem/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");            
     }
 
     if(isset($_POST['backsite-view-only'])) {
         $projects_name = mysqli_real_escape_string($conn, $_POST['projects_name']);
-            header("location: http://localhost/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");            
+            header("location: http://ngcbdcinventorysystem/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");            
     }
 
     if(isset($_POST['backsite-mat-eng'])) {
         $projects_name = mysqli_real_escape_string($conn, $_POST['projects_name']);
-            header("location: http://localhost/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");            
+            header("location: http://ngcbdcinventorysystem/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");            
     }
 
     if(isset($_POST['backsitestockcard-view-only'])) {
         $projects_name = mysqli_real_escape_string($conn, $_POST['projects_name']);
-            header("location: http://localhost/View%20Only/sitematerials.php?projects_name=$projects_name");            
+            header("location: http://ngcbdcinventorysystem/View%20Only/sitematerials.php?projects_name=$projects_name");            
     }
 
     if(isset($_POST['ok-account-creation'])) {
         $projects_name = mysqli_real_escape_string($conn, $_POST['projects_name']);
-            header("location: http://localhost/Admin/listofaccounts.php");            
+            header("location: http://ngcbdcinventorysystem/Admin/listofaccounts.php");            
     }
 
     if(isset($_POST['fillout_hauling'])) {
         $projects_name = mysqli_real_escape_string($conn, $_POST['projects_name']);
-        header("location: http://localhost/Materials%20Engineer/fillouthauling.php?projects_name=$projects_name");        
+        header("location: http://ngcbdcinventorysystem/Materials%20Engineer/fillouthauling.php?projects_name=$projects_name");        
     }
 
     if(isset($_POST['open_stockcard'])) {
         $mat_name = mysqli_real_escape_string($conn, $_POST['mat_name']);
         $projects_name = mysqli_real_escape_string($conn, $_POST['projects_name']);
-            header("location: http://localhost/Materials%20Engineer/stockcard.php?mat_name=$mat_name&projects_name=$projects_name");
+            header("location: http://ngcbdcinventorysystem/Materials%20Engineer/stockcard.php?mat_name=$mat_name&projects_name=$projects_name");
     }
 
     if(isset($_POST['view_open_stockcard'])) {
@@ -226,11 +226,11 @@
         $mat_name = mysqli_real_escape_string($conn, $_POST['mat_name']);
         $projects_name = mysqli_real_escape_string($conn, $_POST['projects_name']);
         if(strcmp($view_from, "projects" ) == 0) {
-            header("location: http://localhost/View%20Only/stockcard.php?mat_name=$mat_name&projects_name=$projects_name");
+            header("location: http://ngcbdcinventorysystem/View%20Only/stockcard.php?mat_name=$mat_name&projects_name=$projects_name");
         } else if (strcmp($view_from, "categories" ) == 0) {
-            header("location: http://localhost/View%20Only/stockcard.php?mat_name=$mat_name&projects_name=$projects_name");
+            header("location: http://ngcbdcinventorysystem/View%20Only/stockcard.php?mat_name=$mat_name&projects_name=$projects_name");
         }else {
-            header("location: http://localhost/View%20Only/sitestockcard.php?mat_name=$mat_name");
+            header("location: http://ngcbdcinventorysystem/View%20Only/sitestockcard.php?mat_name=$mat_name");
         }
     }
 
@@ -238,12 +238,12 @@
         $mat_name = mysqli_real_escape_string($conn, $_POST['mat_name']);
         $mat_id = mysqli_real_escape_string($conn, $_POST['mat_id']);
         $projects_name = mysqli_real_escape_string($conn, $_POST['projects_name']);
-        header("location: http://localhost/Materials%20Engineer/sitestockcard.php?mat_name=$mat_name&mat_id=$mat_id");
+        header("location: http://ngcbdcinventorysystem/Materials%20Engineer/sitestockcard.php?mat_name=$mat_name&mat_id=$mat_id");
     }
     
     if(isset($_POST['open_report'])) {
         $projects_name = mysqli_real_escape_string($conn, $_POST['projects_name']);
-        header("location: http://localhost/Materials%20Engineer/reportpage.php?projects_name=$projects_name");        
+        header("location: http://ngcbdcinventorysystem/Materials%20Engineer/reportpage.php?projects_name=$projects_name");        
     }
 
     if(isset($_POST['update_account_status'])) {
@@ -265,7 +265,7 @@
             $sql = "INSERT INTO logs (logs_datetime, logs_activity, logs_logsOf) VALUES ('$update_date', 'Disabled account of $accounts_name', 1);";
             mysqli_query($conn, $sql);
         }
-        header("location: http://localhost/Admin/listofaccounts.php");        
+        header("location: http://ngcbdcinventorysystem/Admin/listofaccounts.php");        
     }
 
     if(isset($_POST['view_category'])) {
@@ -273,9 +273,9 @@
         $account_type =  mysqli_real_escape_string($conn, $_POST['account_type']);
         $projects_name = mysqli_real_escape_string($conn, $_POST['projects_name']);
         if(strcmp($account_type,'MatEng') == 0) {
-            header("location: http://localhost/Materials%20Engineer/itemcategories.php?categories_id=$categories_id&projects_name=$projects_name");            
+            header("location: http://ngcbdcinventorysystem/Materials%20Engineer/itemcategories.php?categories_id=$categories_id&projects_name=$projects_name");            
         } else {
-            header("location: http://localhost/View%20Only/itemcategories.php?categories_id=$categories_id&projects_name=$projects_name");            
+            header("location: http://ngcbdcinventorysystem/View%20Only/itemcategories.php?categories_id=$categories_id&projects_name=$projects_name");            
         }
     }
 
@@ -283,9 +283,9 @@
         $hauling_no = mysqli_real_escape_string($conn, $_POST['hauling_no']);
         $account_type = mysqli_real_escape_string($conn, $_POST['account_type']);
         if(strcmp($account_type,'MatEng') == 0) {
-            header("location: http://localhost/Materials%20Engineer/viewhaulingform.php?hauling_no=$hauling_no");            
+            header("location: http://ngcbdcinventorysystem/Materials%20Engineer/viewhaulingform.php?hauling_no=$hauling_no");            
         } else {
-        header("location: http://localhost/View%20Only/viewhaulingform.php?hauling_no=$hauling_no");            
+        header("location: http://ngcbdcinventorysystem/View%20Only/viewhaulingform.php?hauling_no=$hauling_no");            
         }
     }
 
@@ -343,7 +343,7 @@
         $logs_of = $account_id;
         $stmt->execute();
         $stmt->close();
-        header("Location:http://localhost/Materials%20Engineer/hauleditems.php");        
+        header("Location:http://ngcbdcinventorysystem/Materials%20Engineer/hauleditems.php");        
     }
 
     if(isset($_POST['create_category'])) {
@@ -378,7 +378,7 @@
             $stmt->execute();
             $stmt->close();
         }
-        header("Location:http://localhost/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");        
+        header("Location:http://ngcbdcinventorysystem/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");        
     }
 
     if (isset($_POST['edit_category'])) {
@@ -407,7 +407,7 @@
             $stmt->execute();
             $stmt->close();
         }
-        header("Location:http://localhost/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");
+        header("Location:http://ngcbdcinventorysystem/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");
     }
 
     if(isset($_POST['create_unit'])) {
@@ -442,12 +442,12 @@
             $stmt->execute();
             $stmt->close();
         }
-        header("Location:http://localhost/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");        
+        header("Location:http://ngcbdcinventorysystem/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");        
     }
 
     if(isset($_POST['viewtodo'])) {
         $todoOf = mysqli_real_escape_string($conn, $_POST['todoOf']);
-        header("location: http://localhost/Materials%20Engineer/dashboard.php?todoOf=$todoOf");        
+        header("location: http://ngcbdcinventorysystem/Materials%20Engineer/dashboard.php?todoOf=$todoOf");        
     }
     
     if (isset($_POST['create_todo'])) {
@@ -471,7 +471,7 @@
         $stmt->bind_param("ssi", $create_todo_date, $logs_message, $logs_of);
         $stmt->execute();
         $stmt->close();
-        header("Location:http://localhost/Materials%20Engineer/dashboard.php");        
+        header("Location:http://ngcbdcinventorysystem/Materials%20Engineer/dashboard.php");        
     }
 
     if (isset($_POST['create_materials'])) {
@@ -506,7 +506,7 @@
         $logs_of = $account_id;
         $stmt->execute();
         $stmt->close();
-        header("Location:http://localhost/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");        
+        header("Location:http://ngcbdcinventorysystem/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");        
     }
 
     if(isset($_POST['edit_account'])) {
@@ -587,7 +587,7 @@
             $stmt->execute();
             $stmt->close();
         }
-        header("location: http://localhost/Materials%20Engineer/account.php");        
+        header("location: http://ngcbdcinventorysystem/Materials%20Engineer/account.php");        
     }
 
     if(isset($_POST['todo_update'])) {
@@ -628,9 +628,9 @@
             $stmt->close();
         }
         if(strcasecmp($update_from, 'dashboard') == 0) {   
-            header("location: http://localhost/Materials%20Engineer/dashboard.php");  
+            header("location: http://ngcbdcinventorysystem/Materials%20Engineer/dashboard.php");  
         } else {
-            header("location: http://localhost/Materials%20Engineer/viewalltasks.php");
+            header("location: http://ngcbdcinventorysystem/Materials%20Engineer/viewalltasks.php");
         }
     }
 
@@ -672,7 +672,7 @@
         $logs_of = $account_id;
         $stmt->execute();
         $stmt->close();
-        header("Location:http://localhost/Materials%20Engineer/stockcard.php?mat_name=$mat_name&projects_name=$projects_name");        
+        header("Location:http://ngcbdcinventorysystem/Materials%20Engineer/stockcard.php?mat_name=$mat_name&projects_name=$projects_name");        
     }
 
     if (isset($_POST['add_deliveredinsite'])) {
@@ -712,7 +712,7 @@
         $logs_of = $account_id;
         $stmt->execute();
         $stmt->close();
-        header("Location:http://localhost/Materials%20Engineer/sitestockcard.php?mat_name=$mat_name&mat_id=$mat_id");        
+        header("Location:http://ngcbdcinventorysystem/Materials%20Engineer/sitestockcard.php?mat_name=$mat_name&mat_id=$mat_id");        
     }
 
     if (isset($_POST['add_usagein'])) {
@@ -755,7 +755,7 @@
         $logs_of = $account_id;
         $stmt->execute();
         $stmt->close();
-            header("Location:http://localhost/Materials%20Engineer/stockcard.php?mat_name=$mat_name&projects_name=$projects_name");
+            header("Location:http://ngcbdcinventorysystem/Materials%20Engineer/stockcard.php?mat_name=$mat_name&projects_name=$projects_name");
     }
 
     if (isset($_POST['add_usageinsite'])) {
@@ -797,7 +797,7 @@
         $logs_of = $account_id;
         $stmt->execute();
         $stmt->close();
-            header("Location:http://localhost/Materials%20Engineer/sitestockcard.php?mat_name=$mat_name&mat_id=$mat_id");
+            header("Location:http://ngcbdcinventorysystem/Materials%20Engineer/sitestockcard.php?mat_name=$mat_name&mat_id=$mat_id");
     }
 
     if(isset($_POST['edit_materials'])) {
@@ -851,9 +851,9 @@
             $stmt->close();
         }
         if(strcasecmp($update_from, 'stockcard') == 0) {   
-            header("Location:http://localhost/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");   
+            header("Location:http://ngcbdcinventorysystem/Materials%20Engineer/viewinventory.php?projects_name=$projects_name");   
         } else {
-            header("Location:http://localhost/Materials%20Engineer/sitematerials.php");     
+            header("Location:http://ngcbdcinventorysystem/Materials%20Engineer/sitematerials.php");     
         }         
     }
 
@@ -867,7 +867,7 @@
         $generate_report_date = date("Y-m-d G:i:s");
         $sql = "INSERT INTO logs (logs_datetime, logs_activity, logs_logsOf, logs_itemname) VALUES ('$generate_report_date', 'Generated report of $projects_name', $account_id);";
         mysqli_query($conn, $sql); 
-        header("location: http://localhost/Materials%20Engineer/generate_report.php?projects_name=$projects_name");        
+        header("location: http://ngcbdcinventorysystem/Materials%20Engineer/generate_report.php?projects_name=$projects_name");        
     }
 
     if(isset($_POST['generate_hauling'])) {
@@ -880,12 +880,12 @@
         $generate_hauling_date = date("Y-m-d G:i:s");
         $sql = "INSERT INTO logs (logs_datetime, logs_activity, logs_logsOf, logs_itemname) VALUES ('$generate_hauling_date', 'Generated Hauling Form of Form No $hauling_no', $account_id);";
         mysqli_query($conn, $sql); 
-        header("location: http://localhost/Materials%20Engineer/generate_hauling.php?hauling_no=$hauling_no");        
+        header("location: http://ngcbdcinventorysystem/Materials%20Engineer/generate_hauling.php?hauling_no=$hauling_no");        
     }
 
     if(isset($_POST['search'])) {
         $projects_name = $_POST['projects_name'];
-        header("location: http://localhost/View%20Only/viewinventory.php?projects_name=$projects_name");
+        header("location: http://ngcbdcinventorysystem/View%20Only/viewinventory.php?projects_name=$projects_name");
     }
 
     if(isset($_POST['password_request'])) {
@@ -916,7 +916,7 @@
             $stmt->execute();
         }
         $stmt->close();
-        header("location: http://localhost/index.php");        
+        header("location: http://ngcbdcinventorysystem/index.php");        
     }
 
     if(isset($_POST['request_accept'])) {
@@ -954,7 +954,7 @@
                             Please change your password after logging in. <br /> <br /> Password: <b>'.$generated_password.'</b>';
             $mail->send();
         } catch (Exception $e) {}
-        header("location: http://localhost/Admin/passwordrequest.php");        
+        header("location: http://ngcbdcinventorysystem/Admin/passwordrequest.php");        
     }
 
     if(isset($_POST['delete_project'])) {
@@ -964,7 +964,7 @@
         $stmt->bind_param("s", $project_name);
         $stmt->execute();
         $stmt->close();
-        header("location: http://localhost/Admin/projects.php");
+        header("location: http://ngcbdcinventorysystem/Admin/projects.php");
     }
 
     if(isset($_POST['request_reject'])) {
@@ -986,7 +986,7 @@
         $stmt->bind_param("i", $request_accountID);
         $stmt->execute();
         $stmt->close();
-        header("location: http://localhost/Admin/passwordrequest.php");
+        header("location: http://ngcbdcinventorysystem/Admin/passwordrequest.php");
     }
 
     // API

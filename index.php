@@ -8,13 +8,13 @@
             $account_type = $_SESSION['account_type'];
             echo $account_type;
             if (strcmp($account_type,"Admin") == 0) {
-                header("location: http://localhost/Admin/admindashboard.php");
+                header("location: http://ngcbdcinventorysystem/Admin/admindashboard.php");
                 exit;
             } else if (strcmp($account_type,"MatEng") == 0) {
-                header("location: http://localhost/Materials%20Engineer/dashboard.php");
+                header("location: http://ngcbdcinventorysystem/Materials%20Engineer/dashboard.php");
                 exit;
             } else {
-                header("location: http://localhost/View%20Only/projects.php");
+                header("location: http://ngcbdcinventorysystem/View%20Only/projects.php");
                 exit;
             }
         }
