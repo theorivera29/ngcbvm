@@ -1,0 +1,1953 @@
+/*Fonts Used*/
+@font-face {
+    font-family: Galyon;
+    src: url("fonts/Galyon-Regular.eot"),
+        url("fonts/Galyon-Regular.ttf"),
+        url("fonts/Galyon-Regular.woff"),
+        url("fonts/Galyon-Regular.woff2");
+}
+
+@font-face {
+    font-family: Pridi;
+    src: url("fonts/pridi-v4-latin-regular.eot"),
+        url("fonts/pridi-v4-latin-regular.ttf"),
+        url("fonts/pridi-v4-latin-regular.woff"),
+        url("fonts/pridi-v4-latin-regular.woff2");
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #E0E0E0;
+}
+
+.Calendar-Container {
+    padding-top: 2%;
+}
+
+.materialize-textarea {
+    border-radius: 4% !important;
+}
+
+
+.todo-btn {
+    float: right !important;
+    margin-bottom: 2%;
+    color: #0D1F2D !important;
+    background-color: #ffffff !important;
+}
+
+.Task-Container {
+    background-color: #F0F1F2;
+    margin-top: 1%;
+    margin-left: 1% !important;
+    border-radius: 2%;
+    border: 2px solid #3E3E3F;
+    width: 50% !important;
+}
+
+
+
+.Material-Left-Container {
+    background-color: #F0F1F2;
+    margin-top: 1%;
+    margin-left: 2% !important;
+    padding-bottom: 1% !important;
+    border-radius: 2%;
+    width: 96% !important;
+    border: 2px solid #97A0A5;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+
+
+.view-task-btn {
+    float: right;
+    color: #0D1F2D !important;
+    background-color: #1A5D89 !important;
+    color: white !important;
+}
+
+.acName {
+    text-align: center;
+}
+
+
+.save-todo {
+    padding-right: 2% !important;
+}
+
+/* Style for Site > Project */
+.save-btn,
+.view-hauled-item-btn,
+.reopen-btn {
+    background-color: #19466D !important;
+    color: #FFFFFF !important;
+}
+
+.view-inventory {
+    background-color: #DEE0E1;
+    font-size: 2.5vmin;
+    table-layout: fixed;
+}
+
+/* Style for Site > Site Materials */
+
+
+/* Style for Site > Category */
+
+.category-title {
+    font-size: 30px !important;
+}
+
+.view-inventory-btn {
+    background-color: #ffffff !important;
+    color: #0D1F2D !important;
+}
+
+th {
+    text-align: center !important;
+}
+
+
+
+
+
+
+
+.item-cat-col {
+    padding-right: 2% !important;
+    padding-top: 1% !important;
+}
+
+
+.proj-row {
+    background-color: #1A5D89;
+    color: #ffffff;
+}
+
+.input-field input[type=text]:focus+label,
+.input-field input[type=password]:focus+label {
+    color: none !important;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*UPDATED CONTAINER STYLES OF THE MATERIALS ENGINEER MODULE*/
+
+/*Login*/
+.split-login-container {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+}
+
+.left-login-container {
+    background-color: #000035;
+    background-image: url('Images/login2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 50%;
+    background-position-y: 30%;
+}
+
+.header-container-one {
+    margin-top: 50%;
+}
+
+.header-one {
+    font-family: Galyon;
+    text-align: center;
+    font-size: 6vh;
+    color: #FFFFFF;
+}
+
+.right-login-container {
+    right: 0;
+    text-align: center;
+}
+
+
+#login-form {
+    font-family: Galyon;
+    margin: auto;
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+}
+
+.col {
+    padding: 0 !important;
+}
+
+
+
+.submit-btn {
+    width: 50% !important;
+}
+
+.f-login {
+    padding-left: 2%;
+}
+
+.username {
+    margin-top: 5% !important;
+    margin-bottom: 1% !important;
+}
+
+.password {
+    margin-top: 5% !important;
+}
+
+#create-btn {
+    padding-top: 20% !important;
+}
+
+label {
+    font-size: 3vmin !important;
+
+}
+
+.reset-password label {
+    margin-top: 3% !important;
+}
+
+#form-switch {
+    display: none
+}
+
+#password-form {
+    display: none;
+}
+
+#form-switch:checked~#password-form {
+    display: block
+}
+
+#form-switch:checked~#login-form {
+    display: none
+}
+
+#form-switch-label {
+    font-size: 2.5vmin !important;
+}
+
+.login-btn {
+    width: 100% !important;
+    padding-bottom: 2% !important;
+    color: #ffffff !important;
+    background-color: #4C99AF !important;
+    font-size: 2vh !important;
+}
+
+
+
+.reset-password-btn {
+    color: #ffffff !important;
+    background-color: #4C99AF !important;
+    font-size: 2vh !important;
+}
+
+#field-login-username {
+    background-color: #EDEBEA !important;
+    color: #19466D;
+    border-bottom: none !important;
+}
+
+#field-login-password {
+    background-color: #EDEBEA !important;
+    color: #19466D;
+    border-bottom: none !important;
+}
+
+.input-field label {
+    color: #19466D;
+}
+
+.input-field label.active {
+    position: absolute;
+    left: 0.0rem !important;
+    padding-bottom: 2% !important;
+}
+
+input[type=text],
+input[type=password] {
+
+    padding-left: 5% !important;
+    margin-bottom: 10% !important;
+    box-sizing: inherit !important;
+}
+
+input:focus {
+    outline: 2px solid #63C7B2;
+}
+
+input[type=text]:disabled {
+    color: black;
+    font-size: 2.5vmin !important;
+    text-align: center;
+}
+
+/*Side navigation*/
+nav {
+    color: #19466D;
+    background-color: #F7F7F7 !important;
+    font-size: 2vmin !important;
+}
+
+#acName {
+    float: right;
+    margin-right: 3%;
+    font-family: Pridi;
+    font-size: 2.5vmin;
+}
+
+.down-arrow {
+    float: right !important;
+
+}
+
+.right {
+    color: white !important;
+}
+
+.left {
+    color: white;
+    margin-left: 5%;
+}
+
+
+.dropdown-content {
+    background-color: #FFFFFF;
+    opacity: 0;
+    position: absolute;
+}
+
+.side-nav {
+    background-color: #003A51 !important;
+    font-family: Galyon;
+    overflow-y: hidden;
+}
+
+
+.side-nav a {
+    color: #FFFFFF !important;
+    font-size: 2.5vmin !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.side-nav a:hover {
+    color: #003A51 !important;
+    font-size: 2.5vmin !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.side-nav li {
+    background-color: #003A51;
+    color: #FFFFFF !important;
+    font-size: 2.1vmin !important;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 !important;
+}
+
+.side-nav li.active {
+    background-color: #003A51 !important;
+}
+
+.menuIcon {
+    color: #173753 !important;
+}
+
+.collapsible-header {
+    color: #FFFFFF !important;
+}
+
+.collapsible-header.active:hover {
+    color: #FFFFFF !important;
+}
+
+#create-account-btn {
+    margin-top: 6% !important;
+}
+
+.icon {
+    color: #0D1F2D;
+}
+
+.menu-icon {
+    margin-left: 2%;
+}
+
+#NGCB {
+    font-family: Galyon;
+    color: #BFAB25;
+    margin-bottom: 0;
+    margin-left: 1%;
+    font-size: 3.5vmin;
+    text-align: center !important;
+}
+
+
+.collapsible li.active .right {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.modal-footer {
+    font-size: 2.5vmin !important;
+}
+
+
+i.right {
+    margin-left: 0 !important;
+}
+
+.icon-container {
+    background-color: #003A51 !important;
+    pointer-events: none;
+}
+
+.sidenav-logo {
+    height: 35%;
+    width: 35%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+}
+
+#account-type {
+    padding-top: 2%;
+    text-align: center;
+    color: white;
+    font-size: 2.5vmin;
+}
+
+.side-nav .collapsible-header {
+    margin: 0;
+}
+
+.side-nav .collapsible-body li a {
+    margin: 0 1rem 0 3rem !important;
+    font-size: 2vmin !important;
+}
+
+.dropdown-button {
+    color: black !important;
+    padding: 0;
+}
+
+.dropdown-content li>a {
+    background-color: #003A51;
+    font-size: 2.5vmin;
+    color: #FFFFFF;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+
+.dropdown-content a:hover{
+    color: #003A51 !important;
+    font-size: 2.5vmin !important;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFFFF;
+}
+
+/*Sortable table head*/
+.sort-icon{
+    transform: rotate(90deg) !important;
+}
+
+/*Add To-do Container*/
+.container-addtask {
+    margin-left: 2% !important;
+    margin-top: 2% !important;
+}
+
+#panel-header-task,
+#panel-header,
+#panel-header-materials {
+    font-size: 3vmin !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#panel-header {
+    margin-left: 3%;
+}
+
+.container-to-do {
+    background-color: #F0F1F2;
+    border: 1px solid #003A51;
+    margin-top: 4% !important;
+    margin-left: 3%;
+    border-radius: 2%;
+    overflow: hidden;
+    height: 350px;
+}
+
+.container-date {
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+#panel-text {
+    font-size: 2.7vmin !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-field-todo {
+    width: 90% !important;
+    padding-left: 5% !important;
+    color: black !important;
+    font-size: 4vmin;
+}
+
+.todo-picker {
+    float: left !important;
+    text-align: center !important;
+    border: 1px solid #19466d !important;
+    color: #19466d !important;
+    background-color: #e2e2e2 !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea.materialize-textarea {
+    text-align: left;
+    padding-left: 2% !important;
+    font-size: 2vmin;
+}
+
+#characters,
+#char {
+    font-size: 1.9vmin;
+}
+
+.container-counter {
+    position: absolute;
+    right: 0;
+    margin-top: -8% !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.save-todo-btn {
+    color: #FFFFFF !important;
+    background-color: #71B340 !important;
+    margin-top: 5% !important;
+    margin-bottom: 5% !important;
+    float: right;
+    margin-right: 10%;
+}
+
+.save-todo-btn:hover{
+    color: #FFFFFF !important;
+    background-color: #5D9335 !important;
+}
+
+#panel-header-task {
+    margin-left: 37%;
+    padding-top: 3%;
+    margin-bottom: 1%;
+}
+
+.container-task-todo {
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+    overflow-y: scroll;
+    height: 350px;
+    width: 60.5% !important;
+    background-color: #F0F1F2;
+    border-radius: 2%;
+    border: 1px solid #003A51;
+}
+
+.container-all-task {
+    background-color: #F0F1F2;
+}
+
+.view-tasks-head>tr>th {
+    cursor: pointer !important;
+    background-color: #0B415E !important;
+    font-size: 2.5vmin;
+    border-radius: 2%;
+    color: white;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.view-tasks {
+    table-layout: auto;
+    border-bottom: 1px solid rgb(155, 155, 155);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.task-table-container {
+    height: 5px !important;
+    max-height: 5% !important;
+}
+
+.task-data-table {
+    white-space: nowrap;
+    min-height: 25px;
+    position: relative;
+    width: 30%;
+}
+
+.task-data-table1 {
+    overflow-x: hidden;
+    width: 25%;
+}
+
+.task-data-table2 {
+    overflow-x: hidden;
+    width: 45%;
+}
+
+.doneBtn {
+    background-color: #71B340;
+}
+
+.doneBtn:hover {
+    background-color: #5D9335;
+}
+
+.clearBtn {
+    background-color: #EDC821;
+    color: #000000;
+}
+
+.clearBtn:hover {
+    background-color: #ECC30B;
+    color: #000000;
+}
+
+.modal-question{
+    margin-top: 5%;
+    border-radius: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-question-content{
+    font-size: 3vmin !important;
+}
+
+.no-btn{
+    background-color: #EF5B5B;
+    color: #FFFFFF;
+}
+
+.no-btn:hover{
+    background-color: #C44B4B;
+    color: #FFFFFF;
+}
+
+.yes-btn{
+    background-color: #71B340;
+    color: #FFFFFF;
+    margin-right: 1% !important;
+}
+
+.yes-btn:hover{
+    background-color: #5D9335;
+    color: #FFFFFF;
+}
+
+.task-btn {
+    color: #FFFFFF !important;
+    background-color: #2F89C5 !important;
+    float: right;
+    margin-top: -3%;
+    margin-right: 2%;
+}
+
+.task-btn:hover{
+    color: #FFFFFF !important;
+    background-color: #2771A2 !important;
+}
+
+#panel-header-materials {
+    margin-top: 4% !important;
+    margin-left: 3%;
+}
+
+.container-materials {
+    background-color: #F0F1F2;
+    border: 1px solid #003A51;
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 2%;
+    font-size: 2vmin;
+    width: 95%;
+}
+
+.view-materials-head>tr>th {
+    cursor: pointer;
+    background-color: #0B415E !important;
+    font-size: 2.5vmin;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 2%;
+    color: white;
+}
+
+.view-materials-head>tr>th,
+.materials-left-container>tr>td {
+    padding-left: 5% !important;
+    font-size: 2.5vmin;
+
+}
+
+.materials-left-container>tr>td {
+    width: 90px;
+}
+
+#materialize-lean-overlay{
+    background-color: transparent !important;
+}
+
+/*View All Task*/
+#viewAllTask{
+    width: 90%;
+    margin-left: 5% !important;
+    margin-top: 2%;
+}
+
+.task-text{
+    font-size: 3vmin;
+}
+
+.view-all-tasks{
+    margin-top: 2% !important;
+    border: 1px solid black;
+}
+
+.all-task-table-container {
+    height: 5px !important;
+    max-height: 5% !important;
+}
+
+.all-task-data-table {
+    white-space: nowrap;
+    min-height: 25px;
+    position: relative;
+    width: 30%;
+    font-size: 3vmin !important;
+}
+
+.all-task-data-table1 {
+    overflow-x: hidden;
+    width: 25%;
+    font-size: 3vmin !important;
+}
+
+.all-task-data-table2 {
+    overflow-x: hidden;
+    width: 45%;
+    font-size: 3vmin !important;
+}
+
+#no-task-text{
+    text-align: center;
+    margin-top: 15% !important;
+    color: #C0C0C0;
+}
+
+/*Projects*/
+.project-status {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.tabs-project {
+    background-color: #E0E0E0 !important;
+    margin-top: 2% !important;
+}
+
+.tabs-project a {
+    background-color: #19466D !important;
+    color: #FFFFFF !important;
+    font-size: 2.5vmin !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.tabs-project a:hover {
+    color: #BFAB25 !important;
+    background-color: #FFFFFF !important;
+    font-size: 2vmin !important
+}
+
+.tabs-project .indicator {
+    background-color: #FFFFFF !important;
+}
+
+.project-container {
+    margin-right: -13% !important;
+    margin-left: 10% !important;
+    margin-top: 2% !important;
+}
+
+.project-container-card {
+    border-radius: 5% !important;
+    width: 75% !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card{
+    width: 90% !important;
+    margin-left: 5% !important;
+}
+
+.card .card-content {
+    width: 100% !important;
+    font-size: 2.5vmin;
+    background-color: #BFAB25 !important;
+    color: black;
+}
+
+.card-title {
+    font-size: 4vmin !important;
+    font-weight: bold !important;
+}
+
+.card-text {
+    font-weight: bold !important;
+}
+
+/*View Inventory*/
+.site-materials-body,
+.view-inventory-body{
+    overflow-y: scroll;
+}
+
+.project-name-inventory {
+    font-weight: bold !important;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 5vmin;
+    color: #19466D;
+    font-family: Galyon; 
+}
+
+.view-inventory-slider {
+    width: 70%;
+    margin-left: 15%;
+}
+
+.tabs-inventory {
+    background-color: #E0E0E0 !important;
+    margin-top: 2% !important;
+}
+
+.tabs-inventory a {
+    background-color: #19466D !important;
+    color: #FFFFFF !important;
+    font-size: 2.5vmin !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.tabs-inventory a:hover {
+    color: #BFAB25 !important;
+    background-color: #FFFFFF !important;
+}
+
+.tabs-inventory .indicator {
+    background-color: #FFFFFF !important;
+}
+
+.viewinventory-btn {
+    color: black !important;
+    background-color: #FFFFFF !important;
+    margin-top: 5% !important;
+}
+
+
+/*View Inventory - Site Materials*/
+.search-bar{
+    display: inline-block !important;
+    padding: 10px 15px !important;
+    font-size: 2.5vmin !important;
+    border-radius: 0 !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-bar {
+    width: 30% !important;
+    height: 2% !important;
+}
+
+.view-inventory-bar{
+    margin-left: 1% !important;
+}
+
+.mat-eng-search-bar{
+    margin-top: 2% !important;
+    margin-left: 2% !important;
+    width: 49% !important;
+}
+
+.input[type=search] {
+    border: 1px solid black !important;
+    background-color: #FFFFFF !important;
+}
+
+.edit-material-btn {
+    background-color: #156FE7 !important;
+    color: #FFFFFF !important;
+}
+
+.add-mat-btn {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    margin-top: 2%;
+    font-size: 2.2vmin !important;
+    float: right !important;
+}
+
+.add-unit-btn{
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    margin-top: 2%;
+    font-size: 2.2vmin !important;
+}
+
+.category-name-container{
+    margin-top: 5%;
+    text-align: center;
+}
+
+#categ-title{
+    font-size: 5vmin;
+    padding-bottom: 1%;
+    font-family: Galyon;
+}
+
+.view-inventory-container {
+    width: 98% !important;
+    margin-left: 1%;
+    margin-right: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.view-inventory {
+    border: 1px solid black;
+    border-collapse: separate;
+    background-color: #E8E8E8 !important;
+    margin-bottom: 3%;
+}
+
+.view-inventory-head>tr {
+    background-color: #0B415E !important;
+    font-size: 2.5vmin;
+    color: #FFFFFF;
+    padding-right: 2% !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.td-category {
+    text-align: left !important;
+    background-color: #FFFFFF !important;
+    padding-left: 2%;
+    font-size: 3vmin;
+}
+
+#particular-cell{
+    width: 20%;
+}
+
+/*Stockard*/
+.back-btn{
+    background-color: transparent !important;
+    border: none;
+    overflow: hidden;
+}
+
+.mat-name-title{
+    font-weight: bold !important;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 5vmin;
+    color: #19466D;
+    font-family: Galyon; 
+}
+
+.stockcard-btn{
+    float: right !important;
+    background-color: #ECC30B !important;
+    color: white !important;
+    margin-top: -6%;
+    margin-right: 2%;
+}
+
+.stockcard-status {
+    margin-top: 10% !important;
+}
+
+.tabs-stockard {
+    overflow-x: hidden !important;
+}
+
+.tabs-stockard a {
+    background-color: #19466D !important;
+    color: #FFFFFF !important;
+    font-size: 2vmin !important
+}
+
+.tabs-stockard a:hover {
+    color: #BFAB25 !important;
+    background-color: #FFFFFF !important;
+    font-size: 2vmin !important
+}
+
+.tabs-stockard .indicator {
+    background-color: #FFFFFF !important;
+}
+
+.deliverIn-container {
+    height: 50% !important;
+}
+
+.deliverIn-container-table>tr>th {
+    font-size: 4vmin !important;
+    margin-top: 5% !important;
+    background-color: yellow !important;
+}
+
+.save-mat-btn {
+    color: #ffffff !important;
+    background-color: #71B340 !important;
+    font-size: 2vmin !important;
+}
+
+.save-mat-btn:hover {
+    color: #ffffff !important;
+    background-color: #5D9335 !important;
+}
+
+.cancel-mat-btn{
+    background-color: #EF5B5B;
+    color: #FFFFFF;
+    font-size: 2vmin !important;
+}
+
+.cancel-mat-btn:hover{
+    background-color: #C44B4B;
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 5%;
+}
+
+.add-material-name {
+    margin-top: 5% !important;
+    margin-left: 3% !important;
+    width: 50%;
+}
+
+.add-mat-modal {
+    height: 90% !important;
+    overflow-y: hidden !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.add-mat-modal label {
+    font-size: 2.5vmin !important;
+    margin-left: 3% !important;
+}
+
+
+.material-add-unit {
+    margin-left: 3% !important;
+}
+
+.add-threshold {
+    margin-left: 3% !important;
+    width: 50% !important;
+    margin-top: 3% !important;
+}
+
+.matname-btn {
+    background-color: #FFFFFF;
+    color: #000000 !important;
+    width: 100% !important;
+}
+
+.matname-btn:hover {
+    background-color: #0B415E;
+    color: #FFFFFF !important;
+}
+
+.search-bar-site-materials {
+    width: 20% !important;
+    margin-left: 2% !important;
+    padding-left: 2% !important;
+}
+
+.site-materials-container {
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-materials-content {
+    border: 1px solid black;
+    margin-bottom: 3%;
+}
+
+.site-materials-head>tr>th {
+    cursor: pointer;
+    background-color: #0B415E !important;
+    font-size: 2.5vmin;
+    border-radius: 2%;
+    color: white;
+}
+
+.material-name-field{
+    width: 30% !important;
+    margin-left: 5% !important;
+    margin-top: 3% !important;
+}
+
+.unit-field{
+    margin-left: 3% !important;
+    margin-top: 3% !important;
+}
+
+.threshold-field{
+    margin-left: 3% !important;
+    margin-top: 3% !important;
+}
+
+.stock-card-container {
+    overflow-y: auto !important;
+}
+
+.add-material {
+    padding-right: 2% !important;
+}
+
+.add-category {
+    padding-right: 2% !important;
+}
+
+/*View Inventory - Category*/
+.all-btn {
+    color: #ffffff !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.add-category-modal {
+    width: 40%;
+    margin-top: 5%;
+}
+
+.category-btn{
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+#modal-title {
+    margin-top: 2%;
+    font-size: 4vmin;
+    margin-left: 3%;
+}
+
+.field-category {
+    width: 50% !important;
+    margin-bottom: 5% !important;
+    margin-top: 8% !important;
+    margin-left: 3% !important;
+}
+
+.add-categ-modal label {
+    font-size: 2vmin !important;
+    margin-top: 6%;
+    margin-left: 3% !important;
+}
+
+.add-category-modal {
+    width: 40%;
+    margin-top: 5%;
+}
+
+.categ-name-title{
+    font-weight: bold !important;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    font-size: 5vmin;
+    color: #19466D;
+    font-family: Galyon; 
+}
+
+#category-option {
+    margin-left: 5% !important;
+    width: 100% !important;
+    font-size: 2vmin !important;
+}
+
+.field-new-category {
+    margin-top: 5% !important;
+    margin-left: 3% !important;
+    width: 50% !important;
+}
+
+.edit-categ-modal label {
+    font-size: 2vmin !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.add-mat-picker {
+    text-align: center !important;
+    color: #19466d !important;
+}
+
+select[name=mat_unit] {
+    font-size: 2vmin !important;
+}
+
+.item-categories {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.item-categories-head>tr>th {
+    cursor: pointer;
+    background-color: #0B415E !important;
+    font-size: 2.5vmin;
+    color: #FFFFFF;
+    padding-right: 2% !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.category-items-table{
+    border: 1px solid black;
+}
+
+.add-mat-btn-viewinventory{
+    margin-right: 1% !important;
+    margin-left: 1% !important;
+}
+
+.search-viewinventory {
+    margin-left: 3% !important;
+}
+
+/*Deliver In*/
+.deliverin-container {
+    width: 95% !important;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.deliverin {
+    border: 1px solid black;
+    border-collapse: separate;
+    margin-bottom: 3%;
+}
+
+.deliverin-head>tr>th {
+    background-color: #0B415E !important;
+    font-size: 2.5vmin;
+    color: #FFFFFF;
+    padding-right: 2% !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.save-stockcard-btn{
+    background-color: #71B340;
+    margin-bottom: 2% !important;
+    margin-top: -20%;
+}
+
+.save-stockcard-btn:hover{
+    background-color: #5D9335 !important;
+}
+
+.stockcard-entry>td{
+    background-color: #ffffff !important;
+    text-align: center !important;
+    padding-left: 2% !important;
+    padding-right: 2% !important;
+}
+
+.deliverin-data>td{
+    text-align: center !important;
+    margin-top: 2% !important;
+    margin-right: 2% !important;
+    padding-right: 2%;
+    padding-left: 2%;
+    background-color: #FFFFFF !important;
+}
+
+.stockcard-span{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vmin !important;
+}
+
+.stockcard-deliverin-btn{
+    margin-top: -1%;
+    float: right;
+}
+
+/*Usage In*/
+.usagein-container {
+    width: 95% !important;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.usagein{
+    border: 1px solid black;
+    border-collapse: separate;
+    margin-bottom: 3%;
+}
+
+.usagein-head>tr>th {
+    background-color: #0B415E !important;
+    font-size: 2.5vmin;
+    color: #FFFFFF;
+    padding-right: 2% !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.usagein>tr>td {
+    background-color: #FFFFFF !important;
+}
+
+.stockcard-usagein-btn{
+    margin-top: -1%;
+    float: right;
+}
+
+.usagein-data>td{
+    margin-top: 2% !important;
+    margin-right: 2% !important;
+}
+
+.total{
+    margin-left: 23%;
+    margin-bottom: 3%;
+    font-size: 2.5vmin;
+    font-weight: bold;
+}
+
+/*Edit Material*/
+.editmaterial-container {
+    width: 70% !important;
+    margin: 5%;
+    margin-top: 2%;
+    margin-left: 15% !important;
+}
+
+.edit-mat-container{
+    padding: 5%;
+    padding-top: 2%;
+}
+
+.edit-matname-btn{
+    float: right !important;
+}
+
+
+/*Hauling*/
+.hauling-project-card {
+    margin-right: 5%;
+    margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hauling-project-card-content {
+    text-align: center;
+
+}
+
+/*Fill out hauling form*/
+.fill-hauling-form-container {
+    margin-top: 3%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.haulingform-container {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.hauling-form {
+    background-color: #FFFFFF !important;
+}
+
+#date-span {
+    padding-right: 1% !important;
+    font-size: 2vmin !important;
+}
+
+.hauling-date {
+    margin-right: 4% !important;
+    margin-left: 6% !important;
+}
+
+.container-date-hauling {
+    float: right;
+    margin-right: 5% !important;
+    margin-top: 1.5%;
+}
+
+.deliver-to-field {
+    width: 50% !important;
+}
+
+.form-number-field {
+    width: 20% !important;
+    float: right !important;
+    margin-right: 4%;
+}
+
+.hauled-from-field {
+    width: 50% !important;
+}
+
+.hauling-table-container {
+    width: 100% !important;
+    margin-left: 2%;
+}
+
+.hauling-form-table {
+    width: 90% !important;
+    text-align: center !important;
+}
+
+.hauling-form-table-head>tr>th {
+    font-size: 2.5vh !important;
+    background-color: #19466D !important;
+    color: #FFFFFF !important;
+}
+
+.hauled-side-container {
+    margin-top: 5% !important;
+}
+
+.fillout-content {
+    background-color: #FFFFFF !important;
+    width: 100% !important;
+    font-size: 2.5vmin;
+    padding-left: 5% !important;
+    padding-top: 5% !important;
+}
+
+
+.save-hauled-btn{
+    background-color: #71B340;
+}
+
+.save-hauled-btn:hover{
+    background-color: #5D9335 !important;
+}
+
+.cancel-hauled-btn{
+    background-color: #EF5B5B;
+}
+
+.cancel-hauled-btn:hover{
+    background-color: #EF5B5B;
+}
+
+/*View Hauled*/
+
+.hauled-items-head>tr>th{
+    cursor: pointer;
+    background-color: #0B415E !important;
+    font-size: 2.5vmin;
+    border-radius: 2%;
+    color: white;
+    padding-right: 2%;
+    padding-left: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.view-hauled-item-btn{
+    background-color: #71B340 !important;
+}
+
+.view-hauled-form label{
+    color: #000000 !important;
+}
+
+/*Report*/
+.report-project-card {
+    margin-right: 5%;
+    margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.report-project-card-content {
+    text-align: center;
+}
+
+/*Report Page*/
+/* Style for Report*/
+.report-btn {
+    background-color: #ECC30B !important;
+    color: white !important;
+    margin-top: 1%;
+    margin-right: 2%;
+}
+
+.report-container {
+    width: 96% !important;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.report-head>tr>th {
+    background-color: #0B415E !important;
+    font-size: 2.5vmin;
+    border-radius: 2%;
+    color: white;
+}
+
+.report-table {
+    border: 1px solid black;
+    border-collapse: separate;
+    background-color: #FFFFFF;
+}
+
+.report-table>tr>td {
+    background-color: #0B415E !important;
+    font-size: 3vmin !important;
+    color: white !important;
+}
+
+.report-head>tr {
+    background-color: #0B415E !important;
+    font-size: 2.5vmin;
+    color: #FFFFFF;
+    padding-right: 2% !important;
+}
+
+/*Account Settings*/
+.account-container {
+    width: 80%;
+    margin: 10%;
+    margin-top: 5%;
+}
+
+.account-edit-container {
+    padding: 5%;
+    padding-top: 2%;
+}
+
+.account-edit-field {
+    width: 30%;
+    margin-top: 8%;
+    margin-left:
+}
+
+.account-username-field {
+    margin-left: 5% !important;
+    margin-top: 3% !important;
+}
+
+.account-email-field {
+    margin-left: 5% !important;
+    margin-top: 3% !important;
+}
+
+.account-firstname-field {
+    margin-left: 5% !important;
+    margin-top: 3% !important;
+}
+
+.account-lastname-field {
+    margin-left: 5% !important;
+    margin-top: 3% !important;
+}
+
+.account-newpassword-field {
+    margin-left: 5% !important;
+    margin-top: 3% !important;
+}
+
+.account-confirmpassword-field {
+    margin-left: 5% !important;
+    margin-top: 3% !important;
+}
+
+.account-btn {
+    float: right !important;
+}
+
+.account-setting-label {
+    font-size: 3vmin !important;
+    color: black !important
+}
+
+.save-acc-btn{
+    background-color: #71B340;
+}
+
+.save-acc-btn:hover{
+    background-color: #5D9335;
+}
+
+.cancel-acc-btn{
+    background-color: #EF5B5B;
+}
+
+.cancel-acc-btn:hover{
+    background-color: #EF5B5B;
+}
+
+/*Design for Admin Module*/
+.cards-container-admin {
+    margin-left: 6.5% !important;
+    margin-top: 3% !important;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.account-container-admin {
+    float: left;
+    width: 25%;
+    padding: 2% !important;
+    padding-left: 2% !important;
+    padding-top: 2% !important;
+    background-color: #DD5854;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.account-container-admin:hover {
+    box-shadow: 0px 0px 50px #DD817E;
+    z-index: 2;
+    transition: all 100 ms ease-in;
+    transform: scale(1.1);
+}
+
+.dashcount{
+    font-family: Galyon;
+    font-size: 10vmin !important;
+    text-align: center !important;
+}
+
+.password-reset-container {
+    float: left;
+    width: 25%;
+    padding: 2% !important;
+    padding-left: 2% !important;
+    padding-top: 2% !important;
+    background-color: #FFC551;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.password-reset-container:hover {
+    box-shadow: 0px 0px 50px #FFD37C;
+    z-index: 2;
+    transition: all 100 ms ease-in;
+    transform: scale(1.1);
+}
+
+.project-status-container{
+    float: left;
+    width: 25%;
+    padding: 2% !important;
+    padding-left: 2% !important;
+    padding-top: 2% !important;
+    background-color: #84B218;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.project-status-container:hover{
+    box-shadow: 0px 0px 50px #8EB23A;
+    z-index: 2;
+    transition: all 100 ms ease-in;
+    transform: scale(1.1);
+}
+
+.sub-header-number{
+    color: #FFFFFF !important;
+    text-align: center;
+    margin-right: 10%;
+    font-family: Galyon;
+    font-size: 5vmin !important;
+}
+
+.text-headers {
+    font-weight: bold;
+    font-size: 3vmin;
+    margin-top: 1% !important;
+}
+
+.sub-header-number {
+    margin-top: 5% !important;
+    font-size: 1vmin !important;
+}
+
+.sub-header-text {
+    margin-top: 10% !important;
+    text-align: center !important;
+    font-size: 3vmin !important;
+}
+
+/*Account Creation*/
+.account-creation-container{
+    margin-top: 3% !important;
+    margin-left: 10% !important;
+    background-color: #FFFFFF !important;
+    width: 80%;
+    padding-top: 2%; 
+    padding-left: 5%;
+    float: left;
+
+}
+
+.create-account-field{
+    width: 80% !important;
+    margin-left: 20% !important;
+    margin-top: 5% !important;
+}
+
+.header-two {
+    text-align: left;
+    color: #00171F;
+    font-size: 6vmin;
+    font-family: Pridi;
+    padding-bottom: 2% !important;
+}
+
+.create-account-btn {
+    margin-right: 8%;
+    float: right;
+    margin-bottom: 2%;
+    background-color: #71B340 !important;
+}
+
+.create-account-btn:hover {
+    color: #FFFFFF !important;
+    background-color: #5D9335 !important;
+}
+
+.radio-container{
+    margin-left: 8%;
+}
+
+.create-account-modal{
+    width: 40%;
+    height: 25%;
+}
+
+#create-modal-text{
+    font-size: 3vmin !important;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.ok-btn{
+    float: right;
+    margin-right: 5%;
+    margin-top: 5%;
+}
+/*List of Accounts*/
+.account-list-container{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.account-list-head>tr>th{
+    cursor: pointer;
+    background-color: #0B415E !important;
+    color: #FFFFFF;
+}
+
+.disable-btn{
+    background-color: #EF5B5B;
+    color: #FFFFFF;
+}
+
+.disable-btn:hover{
+    background-color: #C44B4B;
+    color: #FFFFFF;
+}
+
+.enable-btn{
+    background-color: #71B340;
+    color: #FFFFFF;
+}
+
+.enable-btn:hover{
+    background-color: #5D9335;
+    color: #FFFFFF;
+}
+
+/*Password Reset*/
+.pass-reset-container{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.pass-reset-table-head>tr>th{
+    cursor: pointer !important;
+    background-color: #0B415E !important;
+    color: #FFFFFF;
+}
+
+.reject-btn{
+    background-color: #EF5B5B;
+    color: #FFFFFF;
+}
+
+.reject-btn:hover{
+    background-color: #C44B4B;
+    color: #FFFFFF;
+}
+
+.accept-btn{
+    background-color: #71B340;
+    color: #FFFFFF;
+    margin-right: 1% !important;
+}
+
+.accept-btn:hover{
+    background-color: #5D9335;
+    color: #FFFFFF;
+}
+
+/*Admin Projects*/
+.add-project-btn{
+    margin-top: 2%;
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+.save-proj-btn{
+    color: #FFFFFF !important;
+    background-color: #71B340 !important;
+    margin-right: 2% !important;
+}
+    
+.save-proj-btn:hover{
+    color: #FFFFFF !important;
+    background-color: #5D9335 !important;
+}
+
+.edit-proj-btn{
+    background-color: #2F89C5!important;
+    color: #FFFFFF;
+}
+
+.edit-proj-btn:hover{
+    background-color: #B0CBDD ;
+    color: #FFFFFF;
+}
+
+.close-proj-btn{
+    background-color: #EF5B5B;
+    color: #FFFFFF;
+}
+
+.close-proj-btn:hover{
+    background-color: #C44B4B;
+}
+
+.reopen-btn{
+    background-color: #71B340 !important;
+}
+
+.reopen-btn:hover {
+    color: #FFFFFF !important;
+    background-color: #5D9335 !important;
+}
+
+.delete-btn{
+    background-color: #A31621 !important;
+    color: #FFFFFF;
+}
+
+.delete-btn:hover{
+    background-color: #A31621 !important;
+    color: #FFFFFF;
+}
+
+.add-proj,
+.edit-proj{
+    margin-top: 4%;
+}
+
+.cancel-proj-btn{
+    background-color: #EF5B5B !important;
+    margin-left: 1% !important;
+}
+
+.cancel-proj-btn:hover{
+    background-color: #EF5B5B !important;
+}
+
+
+
+/*Logs*/
+.logs-container{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 3%;
+    border: 1px solid black;
+} 
+
+.logs-contaienr-table{
+    align: center;
+}
+
+.logs-container-head>tr>th{
+    cursor: pointer;
+    background-color: #0B415E !important;
+    color: #FFFFFF;
+}
+.view-inventory-head>tr>th:hover{
+    cursor: pointer !important;
+}
+
+/*View Only*/
+.item-categories-table{
+    border: 1px solid black;
+    margin-bottom: 3%;
+}
+
+.total-stockcard-delin{
+    margin-left: 31%;
+    font-size: 2.5vmin;
+    font-weight: bold;
+}
