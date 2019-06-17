@@ -62,9 +62,11 @@
                     $sql_hauling = "SELECT
                                 hauling_date,
                                 hauling_hauledBy,
-                                hauling_hauledFrom
+                                projects.projects_name
                             FROM 
                                 hauling
+                            INNER JOIN
+                                projects ON hauling.hauling_hauledFrom = projects.projects_id
                             WHERE
                                 hauling_no = $hauling_no;";
                     $result_hauling = mysqli_query($conn, $sql_hauling);
