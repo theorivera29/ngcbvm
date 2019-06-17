@@ -283,7 +283,7 @@
                                                         </div>
                                                         <label class="col-lg-4 col-form-label">Hauler ID:</label>
                                                         <div class="col-lg-8">
-                                                            <input class="form-control" type="text" name="haulerID" pattern="[0-9]*" title="Input numbers" required>
+                                                            <input class="form-control" type="text" name="haulerID" pattern="[A-Za-z0-9\s.-]*" title="Input numbers" required>
                                                             <div class="invalid-feedback">Please fill out this field.
                                                             </div>
                                                         </div>
