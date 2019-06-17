@@ -139,7 +139,7 @@
                         <div class="col-lg-12">
                             <label class="col-lg-12 col-form-label">Receipt No.:</label>
                             <div class="col-lg-12">
-                                <input class="form-control" type="text" name="resibo" minlength="4" maxlength="11" required>
+                                <input class="form-control" type="text" name="resibo" pattern="[A-Za-z0-9\s]*" required>
                                 <div class="invalid-feedback">Please fill out this field.</div>
                             </div>
                         </div>
