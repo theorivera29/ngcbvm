@@ -219,7 +219,7 @@
                                             WHERE
                                                 projmateng.projmateng_mateng = $accounts_id
                                             AND 
-                                                projects.projects_status = 'open';";
+                                                projects.projects_status = 'closed';";
                                     $result = mysqli_query($conn, $sql);
                                     while ($row = mysqli_fetch_row($result)) {
                                 ?>
